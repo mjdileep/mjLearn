@@ -96,7 +96,4 @@ class softMaxRegressor:
             x=self.normalize(each)
             result.append(self.calc_htetax(x))
         return result
-
-
-
         return self.calc_htetax(x)
