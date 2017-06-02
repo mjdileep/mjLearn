@@ -5,7 +5,7 @@
 #@Poject: softmax
 #@AUTHOR : Jayamal M.D.
 
-'''NOTE THAT THIS ALGORITHM ASSUMES THAT THE DATASET [X]
+'''NOTE THAT THIS MULTI-CLASS CLASSIFICATION ALGORITHM ASSUMES THAT THE DATASET [X]
 CAN BE EXPRESSED AS AN EXPONENTIAL FAMILY DISTRIBUTION
 AS WELL AS THE THE DATASET[X] AND THE TRAGETSET[Y] ARE LINEARLY RELATED!'''
 
@@ -100,4 +100,3 @@ class softMaxRegressor:
             x=self.normalize(each)
             result.append(self.calc_htetax(x))
         return result
-        return self.calc_htetax(x)
