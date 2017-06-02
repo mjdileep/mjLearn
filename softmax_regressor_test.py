@@ -16,6 +16,8 @@ from lib import softmax_regressor as sr
 X=np.matrix([[4,2,3],[7,7,3],[2,12,4],[9,10,2],[7,16,9],[5,13,9],[2,25,15],[2,22,18]])
 Y=np.matrix([[1,0,0,0],[1,0,0,0],[0,1,0,0],[0,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1],[0,0,0,1]])
 
+'''Here [1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1] are four different output classes as the targets and [4,2,3],[2,12,4].... are 3-dimentional inputs'''
+
 var=sr.softMaxRegressor()
 var.train(X,Y,bandwidth=10,alpha=0.001,max_itr=1000)#here you have to keep the balance between bandwidth,alpha and max_itr
 
