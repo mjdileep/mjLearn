@@ -91,6 +91,7 @@ class softMaxRegressor:
             # print(np.dot(self.teta[i],x.getA1()),self.teta[i],x.getA1())
             htetax[i] = np.exp(np.dot(self.teta[i], x.getA1())) / devisor
         htetax[self.teta.shape[0] - 1] = 1 - sum(htetax)
+
         return htetax
 
     def partial_train(self):
@@ -100,5 +101,9 @@ class softMaxRegressor:
         result = []
         for each in X:
             x = self.normalize(each)
-            result.append(self.calc_htetax(x))
+            prediction=self.calc_htetax(x)
+            temp=np.zeros(prediction.shape[0]).astype(int)
+            temp[np.argmax(prediction)] = 1
+            result.append(temp)
+
         return result

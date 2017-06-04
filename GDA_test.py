@@ -7,7 +7,7 @@
 '''NOTE THAT GDA( Gaussian Discriminant Analysis) IS A BINARY CLASSIFICATION ALGORITHM AND ASSUMES
 YOUR DATASET UNDER EACH CLASS CAN BE EXPRESSED AS A GAUSSIAN DISTRIBUTION...'''
 
-from  lib import GDA
+from lib import GDA
 import numpy as np
 
 var = GDA.GDA_classifier()
