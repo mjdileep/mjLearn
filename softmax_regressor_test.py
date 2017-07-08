@@ -9,7 +9,7 @@
 CAN BE EXPRESSED AS AN EXPONENTIAL FAMILY DISTRIBUTION
 AS WELL AS THE THE DATASET[X] AND THE TRAGETSET[Y] ARE LINEARLY RELATED!'''
 
-import numpy  as np
+import numpy as np
 from lib import softmax_regressor as sr
 
 # X is the input set while Y is the target for the training set
@@ -22,7 +22,8 @@ and [4,2,3],[2,12,4].... are 3-dimentional inputs'''
 
 var = sr.softMaxRegressor()
 var.train(X, Y, bandwidth=10, alpha=0.001,
-          max_itr=1000)  # here you have to keep the balance between bandwidth,alpha and max_itr
+          max_itr=1000)
+# here you have to keep the balance between bandwidth,alpha and max_itr
 
 test = np.matrix([[2, 12, 4], [4, 3, 3]])  # test input
 
